@@ -1,16 +1,14 @@
 import { newTodo } from ".";
 
 function DOM(itemID) {
-    const itemEl = document.querySelector(itemID)
-    
-    itemEl.innerHTML = '';
+  const itemEl = document.querySelector(itemID);
 
-    itemEl.innerHTML = `<div class="todo">
+  itemEl.insertAdjacentHTML(`<div class="todo">
         <h4 class="todo-header">${newTodo.title}</h4>
         <p class="todo-desc">Description: ${newTodo.desc}</p>
         <p class="todo-date">Date by: ${newTodo.date}</p>
         <p class="todo-priority">Priority: ${newTodo.prio}</p>
-      </div>`;
+      </div>`);
 }
 
-export {DOM}
+export { DOM };
